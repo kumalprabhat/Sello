@@ -21,7 +21,7 @@ public class DbHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db)
     {
         db.execSQL("Create table user(name text,uid text,gender text,contact number, email text, password text)");
-        db.execSQL("Create table product(productname text,newprice text,oldprice text,discription text,image BLOB )");
+        db.execSQL("Create table product(name text,productname text,newprice text,oldprice text,discription text,image BLOB )");
     }
 
     @Override

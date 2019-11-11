@@ -26,7 +26,7 @@ public class productRegistration extends AppCompatActivity {
 
     private static int RESULT_LOAD_IMAGE_ID = 1;
     private static final int PERMISSION_REQUEST_CODE = 1;
-    Button upload, uploadimage;
+    Button upload;
     EditText pname,price,oprice,about;
     ImageView image;
     byte[] id_image;
@@ -42,7 +42,6 @@ public class productRegistration extends AppCompatActivity {
         about=findViewById(R.id.about);
         image=findViewById(R.id.photo);
         db=new DbHandler(this);
-        uploadimage=findViewById(R.id.uploadimage);
         upload=findViewById(R.id.upload);
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +63,7 @@ public class productRegistration extends AppCompatActivity {
                 }
             }
         });
-        uploadimage.setOnClickListener(new View.OnClickListener() {
+        image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (checkPermission())

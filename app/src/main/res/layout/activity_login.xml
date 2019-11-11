@@ -16,13 +16,14 @@
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:background="@color/colorAccent"
+
            android:orientation="vertical">
 
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="Welcome To Sello"
+               android:textColor="@color/light_green"
                android:layout_gravity="center"
                android:textSize="30sp"
                />
@@ -40,7 +41,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Login page"
+                android:text="Login here"
+                android:textColor="@color/Black"
                 android:textSize="30sp"/>
 
             <EditText
@@ -61,25 +63,27 @@
                 android:gravity="center"/>
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="180dp"
+                android:layout_height="55dp"
                 android:text="Login"
                 android:textSize="20dp"
                 android:id="@+id/login"
+                android:background="@color/Green"
                 android:layout_marginTop="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Forgot Password?"
+                android:textColor="@color/Black"
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Goto Sighup Page"
-                android:background="@color/Green"
+                android:text="Goto Signup"
+                android:textColor="@color/Green"
                 android:layout_marginTop="20dp"
                 android:id="@+id/log_to_signup"
                 android:textSize="20dp"/>

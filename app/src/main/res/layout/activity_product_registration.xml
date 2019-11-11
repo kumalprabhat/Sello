@@ -24,7 +24,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="upload your product"
-                android:textSize="15sp"/>
+                android:textColor="@color/Green"
+                android:textSize="20sp"/>
 
             <EditText
                 android:id="@+id/pname"
@@ -38,7 +39,7 @@
                 android:id="@+id/nprice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Price"
+                android:hint="New Price"
                 android:layout_marginTop="20dp"
                 android:gravity="center"/>
             <EditText
@@ -56,7 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:hint="Product Description"
-                    android:lines="5"
+                    android:lines="3"
                     android:inputType="text|textMultiLine"
                     android:layout_marginTop="20dp"
                     android:gravity="center"/>
@@ -64,22 +65,23 @@
             <ImageView
                 android:id="@+id/photo"
                 android:layout_width="150dp"
-                android:layout_height="150dp">
-
+                android:layout_height="150dp"
+                android:src="@drawable/ic_file_upload_black_24dp"
+                android:outlineProvider="paddedBounds"
+                android:layout_marginTop="20dp">
             </ImageView>
-            <Button
-                android:id="@+id/uploadimage"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Upload image"
-                android:textSize="20dp"
-                android:layout_marginTop="20dp" />
+                android:text="upload Image"
+                android:textSize="20sp"/>
             <Button
                 android:id="@+id/upload"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="180dp"
+                android:layout_height="55dp"
                 android:text="Upload"
                 android:textSize="20dp"
+                android:background="@color/Green"
                 android:layout_marginTop="20dp" />
 
         </LinearLayout>
