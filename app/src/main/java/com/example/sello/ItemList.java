@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -35,14 +36,15 @@ public class ItemList extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+        list = new ArrayList<>();
         list = db.getDetails();
+        MyAdapter adapter = new MyAdapter(this,list);
 
 
         //Model return ho rha hai...
-       ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,list);//vahi model ka object pass ho rha hai..
+//       ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,list);//vahi model ka object pass ho rha hai..
         //ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,{"});
-        list1.setAdapter(arrayAdapter);//mere list view mein main vahi model pass krr rha hu....
+        list1.setAdapter(adapter);//mere list view mein main vahi model pass krr rha hu....
 
 
     }

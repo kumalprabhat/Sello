@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -128,6 +129,8 @@ public class DbHandler extends SQLiteOpenHelper {
                 String oldprice = cursor.getString(2);
                 String description = cursor.getString(3);
                 byte[] image = cursor.getBlob(4);
+
+                Log.d("Data",image.toString());
 
                 //sello_model sello_model = new sello_model(productname,newprice,oldprice,description,image);
                 sello_model sello_model = new sello_model(productname,newprice,oldprice,description,image);
