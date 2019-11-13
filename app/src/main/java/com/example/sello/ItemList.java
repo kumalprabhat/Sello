@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -39,12 +40,19 @@ public class ItemList extends AppCompatActivity {
         list = new ArrayList<>();
         list = db.getDetails();
         MyAdapter adapter = new MyAdapter(this,list);
+        list1.setAdapter(adapter);
 
 
-        //Model return ho rha hai...
-//       ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,list);//vahi model ka object pass ho rha hai..
-        //ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,{"});
-        list1.setAdapter(adapter);//mere list view mein main vahi model pass krr rha hu....
+        list1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                sello_model sello_model = list.get(position);
+                Intent intent = new Intent(getApplicationContext(),Details.class);
+                intent.putExtra("sello",sello_model);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

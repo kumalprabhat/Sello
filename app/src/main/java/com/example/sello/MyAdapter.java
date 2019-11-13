@@ -46,14 +46,16 @@ public class MyAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater layoutInflater = context.getLayoutInflater();
         convertView = layoutInflater.inflate(R.layout.list_item_view,null,true);
-        TextView text = convertView.findViewById(R.id.item_text);
-        ImageView img = convertView.findViewById(R.id.item_img);
+        TextView text = convertView.findViewById(R.id.item_name);
+        ImageView img = convertView.findViewById(R.id.image);
+        TextView price = convertView.findViewById(R.id.item_price);
         byte[] data = list.get(position).getImage();
 //        Bitmap bmp = BitmapFactory.decodeByteArray(data,0,data.length);
 //        img.setImageBitmap(bmp);
         Drawable d = Drawable.createFromStream(new ByteArrayInputStream(data),null);
         img.setImageDrawable(d);
         text.setText(list.get(position).getProduct_name());
+        price.setText(list.get(position).getProduct_price());
         return convertView;
 
     }
